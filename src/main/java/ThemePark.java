@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class ThemePark {
 
-    private ArrayList<IReviewed> attractions;
+    ArrayList<IReviewed> attractions;
     Attraction attraction;
     Visitor visitor;
 
@@ -19,9 +19,8 @@ public class ThemePark {
         return attractions;
     }
 
-//    public void visit(Visitor visitor, Attraction attraction){
-
-
-
+    public void visit(Visitor visitor, Attraction attraction){
+        attraction.increaseVisitCount();
+        visitor.addAttraction(attraction);
     }
 }
